@@ -1,0 +1,55 @@
+server:
+  port: 9600
+  max-http-header-size: 512000
+  jetty:
+    threads:
+      min: 300
+      max: 3000
+      idle-timeout: 10000
+    connection-idle-timeout: 10000
+    accesslog:
+      enabled: true
+  servlet:
+    encoding:
+      force: true
+      charset: UTF-8
+
+service:
+  api:
+    base-path: /services/camel-kafka
+    swagger-path: /v3/api-docs
+    swagger-title: 'camel kafka producer'
+    swagger-version: 'version1.0.0-1401/01/07'
+  kafka:
+    topic: camel_kafka_topic
+    brokers: localhost:9192
+
+camel:
+  springboot:
+    main-run-controller: true
+    jmx-management-statistics-level: extended
+    endpoint-runtime-statistics-enabled: true
+    backlog-tracing: true
+  dataformat:
+    jackson:
+      auto-discover-object-mapper: true
+  servlet:
+    mapping:
+      context-path: ${service.api.base-path}/*
+  component:
+    kafka:
+      commit-timeout-ms: 10000
+      consumer-request-timeout-ms: 30000
+      poll-timeout-ms: 10000
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    display-request-duration: true
+    display-operation-id: true
+    urls:
+      - url: ${service.api.base-path}${service.api.swagger-path}
+        name: 'camel kafka producer'
+  api-docs:
+    groups:
+      enabled: true
