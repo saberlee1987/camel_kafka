@@ -1,7 +1,6 @@
 package com.saber.camel_kafka_producer.routes;
 
-import com.saber.camel_kafka_producer.dto.KafkaProducerResponseDto;
-import com.saber.camel_kafka_producer.dto.Person;
+import com.saber.camel_kafka_producer.dto.*;
 import org.apache.camel.Exchange;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.dataformat.JsonLibrary;
