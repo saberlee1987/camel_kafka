@@ -22,4 +22,6 @@ The following guides illustrate how to use some features concretely:
 * [Using Apache Camel with Spring Boot](https://camel.apache.org/camel-spring-boot/latest/spring-boot.html)
 * [camelKafka](https://camel.apache.org/components/3.15.x/kafka-component.html)
 * [spring-doc-api](https://github.com/springdoc/springdoc-openapi)
+* [kafka-list-topics](https://www.baeldung.com/ops/kafka-list-topics)
+* [creating-kafka-topics](https://www.javatpoint.com/creating-kafka-topics)
 

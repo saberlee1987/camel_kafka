@@ -1,0 +1,8 @@
+https://www.baeldung.com/ops/kafka-list-topics
+
+https://www.javatpoint.com/creating-kafka-topics
+
+listeners=PLAINTEXT://:9192
+# Listener name, hostname and port the broker will advertise to clients.
+# If not set, it uses the value for "listeners".
+advertised.listeners=PLAINTEXT://localhost:9192

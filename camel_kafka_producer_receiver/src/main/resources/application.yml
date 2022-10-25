@@ -1,9 +1,9 @@
 server:
   port: 9600
-  max-http-header-size: 512000
+  max-http-header-size: 756000
   jetty:
     threads:
-      min: 300
+      min: 100
       max: 3000
       idle-timeout: 10000
     connection-idle-timeout: 10000
@@ -19,7 +19,7 @@ service:
     base-path: /services/camel-kafka
     swagger-path: /v3/api-docs
     swagger-title: 'camel kafka producer'
-    swagger-version: 'version1.0.0-1401/01/07'
+    swagger-version: 'version1.0.0-1401/08/03 10:30'
   kafka:
     topic: camel_kafka_topic
     brokers: localhost:9192
