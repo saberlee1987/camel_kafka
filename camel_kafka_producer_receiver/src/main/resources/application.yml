@@ -19,7 +19,7 @@ service:
     base-path: /services/camel-kafka
     swagger-path: /v3/api-docs
     swagger-title: 'camel kafka producer'
-    swagger-version: 'version1.0.0-1401/08/03 10:30'
+    swagger-version: 'version1.0.0-1402/08/14 15:57'
   kafka:
     topic: camel_kafka_topic
     brokers: localhost:9192
